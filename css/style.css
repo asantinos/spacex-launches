@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+:root {
+    --h1-font-size: 3rem;
+    --span-font-size: 4rem;
+    --p-font-size: 1.3rem;
+    --main-logo-height: 1.5rem;
+    --satellite-svg-width: 10rem;
+}
+
+@media (max-width: 520px) {
+    :root {
+        --h1-font-size: 1.5rem;
+        --span-font-size: 2rem;
+        --p-font-size: 0.9rem;
+        --main-logo-height: 1rem;
+        --satellite-svg-width: 6rem;
+    }
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* HEADER AND NAV MENU */
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.header-logo {
+    height: var(--main-logo-height);
+    z-index: 999;
+}
+
+.header-logo img {
+    height: 100%;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.nav-menu ul li a {
+    position: relative;
+    padding: 0.5rem 0;
+    white-space: nowrap; /* Prevent text in 2 lines */
+}
+
+/* Hover effect slide from left to right */
+.nav-menu ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-menu ul li a:hover::before {
+    width: 100%;
+}
+
+/* Nav menu responsive */
+@media (max-width: 520px) {
+    .nav-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 99;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6rem;
+        gap: 1rem;
+    }
+
+    .nav-menu ul li {
+        width: 80%;
+        padding: 0.5rem 0 1.5rem 0;
+        border-bottom: 1px solid #222;
+        text-align: right;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+}
+
+/* Burger Menu */
+.burger-svg {
+    display: none;
+}
+
+@media (max-width: 520px) {
+    .burger-svg {
+        display: block;
+        cursor: pointer;
+        width: 1.5rem;
+        z-index: 999;
+    }
+}
+
+/* HERO IMAGE */
+.hero-container {
+    background: url(/assets/img/launch_banner.jpg) no-repeat center center/cover;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    position: relative;
+}
+
+.hero-container::before {
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.hero-body {
+    position: absolute;
+    text-align: center;
+}
+
+.hero-body h1 {
+    font-size: var(--h1-font-size);
+}
+
+.hero-body span {
+    font-size: var(--span-font-size);
+}
+
+.hero-body p {
+    font-size: var(--p-font-size);
+    margin-top: 1rem;
+}
+
+.hero-image {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Satellite SVG */
+@keyframes orbitSatellite {
+    0% {
+        transform: translateX(-50%) translateY(50%) rotate(0deg);
+    }
+    25% {
+        transform: translateX(150%) translateY(-50%) rotate(90deg);
+    }
+    50% {
+        transform: translateX(350%) translateY(100%) rotate(180deg);
+    }
+    75% {
+        transform: translateX(150%) translateY(-100%) rotate(270deg);
+    }
+    100% {
+        transform: translateX(-100%) translateY(150%) rotate(360deg);
+    }
+}
+
+.svg-icon {
+    animation: orbitSatellite 30s linear infinite;
+    width: var(--satellite-svg-width);
+}
