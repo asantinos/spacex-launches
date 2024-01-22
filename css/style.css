@@ -396,6 +396,7 @@ footer {
 .footer-section p {
     font-size: 1rem;
     color: #9a9a9a;
+    margin-bottom: 2rem;
 }
 
 .footer .footer-copy {
@@ -404,6 +405,22 @@ footer {
     font-size: 0.8rem;
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.social-media img {
+    width: 1.8rem;
+}
+
+.social-media img:hover {
+    filter: drop-shadow(0 0 0.5rem #ffffff5e);
+}
+
+/* Footer responsive */
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: repeat(1, 1fr);
