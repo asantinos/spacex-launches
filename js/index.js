@@ -11,11 +11,7 @@ const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
 
 burgerIcon.addEventListener("click", () => {
-    if (!menuOpen) {
-        navMenu.classList.add("active");
-        menuOpen = true;
-    } else {
-        navMenu.classList.remove("active");
-        menuOpen = false;
-    }
+        navMenu.classList.toggle("active");
+        burgerIcon.classList.toggle("open");
+        menuOpen = !menuOpen;
 });
