@@ -19,7 +19,7 @@ main {
 }
 
 .banner h1 {
-    max-width: 50%;
+    max-width: 70%;
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
@@ -44,13 +44,44 @@ main {
     }
 }
 
+.launches-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.launches-counter .counter {
+    font-size: 2rem;
+    padding: 0 5rem;
+    border-right: 1px solid #222;
+}
+
+.launches-counter .counter:last-child {
+    border-right: none;
+}
+
+.launches-counter .counter h2 {
+    font-size: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.launches-counter .counter p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
 .about-container {
-    max-width: 50%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
     margin: 0 auto;
 }
 
@@ -77,6 +108,16 @@ main {
 }
 
 @media (max-width: 768px) {
+    .launches-counter {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .launches-counter .counter {
+        padding: 1rem 0;
+        border-right: none;
+    }
+
     .about-container {
         max-width: 100%;
     }
