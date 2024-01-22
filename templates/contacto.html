@@ -4,45 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>SpaceX | Contacto</title>
 </head>
 
 <body>
-    <section>
-        <h2>Contact</h2>
+    <!-- HEADER -->
+    <header>
+        <a class="header-logo" href="/">
+            <img src="/assets/img/spacex_logo_w.png" alt="SpaceX Logo">
+        </a>
 
-        <form class="form">
-            <fieldset>
-                <legend>Fill the form and I will contact you as soon as possible</legend>
 
-                <div class="form-content">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" class="input-text" placeholder="Your name">
+        <!-- Burger SVG -->
+        <svg class="burger-svg" viewBox="0 0 100 80" width="25" height="25" fill="#fff">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/templates/acercaDe.html">Acerca de</a></li>
+                <li><a href="/templates/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form class="form">
+                <fieldset>
+                    <legend>Fill the form and I will contact you as soon as possible</legend>
+                    <div class="form-content">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="input-text" placeholder="Your name">
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="input-text" placeholder="Your phone">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="input-text" placeholder="Your email">
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="input-text" placeholder="Your message"></textarea>
+                        </div>
                     </div>
-
-                    <div class="field">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" class="input-text" placeholder="Your phone">
+                    <div class="align-right flex">
+                        <input type="submit" value="Send">
                     </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="input-text" placeholder="Your email">
-                    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <section class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Lanzamientos</a></li>
+                    <li><a href="#">Misiones</a></li>
+                    <li><a href="#">Cohetes</a></li>
+                    <li><a href="#">Starlink</a></li>
+                </ul>
+            </section>
 
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea id="message" class="input-text" placeholder="Your message"></textarea>
-                    </div>
-                </div>
+            <section class="footer-section">
+                <h3>Acerca de</h3>
+                <ul>
+                    <li><a href="/templates/acercaDe.html">Acerca de SpaceX</a></li>
+                    <li><a href="#">Equipo</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Historia</a></li>
+                </ul>
+            </section>
 
-                <div class="align-right flex">
-                    <input type="submit" value="Send" class="button w-sm-100">
-                </div>
-            </fieldset>
-        </form>
-    </section>
+            <section class="footer-section">
+                <h3>SpaceX</h3>
+                <p>Space Exploration Technologies Corp., más conocida como SpaceX, es una empresa aeroespacial
+                    estadounidense fundada en 2002 por Elon Musk con el objetivo de reducir el coste de los viajes
+                    espaciales y habilitar la colonización de Marte.</p>
+            </section>
+        </div>
+
+        <p class="footer-copy">All rights reserved &copy; Alejandro Santos García 2024</p>
+    </footer>
+
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
