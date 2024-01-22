@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Grape+Nuts&family=Rubik+Scribble&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +70,7 @@ ul {
     :root {
         --h1-font-size: 1.5rem;
         --span-font-size: 2rem;
-        --p-font-size: 0.9rem;
+        --p-font-size: 1rem;
         --main-logo-height: 1rem;
         --satellite-svg-width: 6rem;
     }
@@ -94,6 +96,11 @@ header {
     top: 0;
     z-index: 99;
 }
+
+header.scroll-down {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
 
 .header-logo {
     height: var(--main-logo-height);
@@ -227,19 +234,23 @@ header {
 .hero-body {
     position: absolute;
     text-align: center;
+    padding: 0 2rem;
 }
 
 .hero-body h1 {
     font-size: var(--h1-font-size);
+    font-family: "Archivo Black", sans-serif;
 }
 
 .hero-body span {
     font-size: var(--span-font-size);
+    font-family: 'Rubik Scribble', cursive;
 }
 
 .hero-body p {
     font-size: var(--p-font-size);
     margin-top: 1rem;
+    font-family: "Grape Nuts", cursive;
 }
 
 .hero-image {
@@ -328,7 +339,7 @@ header {
 }
 
 .mission-body p {
-    height: 8rem;
+    height: 10rem;
     overflow: auto;
     font-size: 1rem;
     line-height: 1.5;
@@ -401,7 +412,7 @@ footer {
     .footer-section {
         margin: 0 auto;
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 2rem;
     }
 
     .footer-section ul {
@@ -414,10 +425,6 @@ footer {
 
     .footer-section p {
         font-size: 0.9rem;
-    }
-
-    .footer .footer-copy {
-        margin: 1rem 0;
     }
 
     .footer .footer-copy p {
