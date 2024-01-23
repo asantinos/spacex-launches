@@ -20,6 +20,18 @@ main {
     font-size: 1.2rem;
     color: #9a9a9a;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ERRORES */
+.form ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.form ul li {
+    color: #ff5959;
+    margin-bottom: .5rem;
 }
 
 .form legend {
