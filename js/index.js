@@ -24,8 +24,8 @@ const delta = 100;
 window.addEventListener("scroll", function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // No hacer nada si el scroll es menor que delta
-    if (Math.abs(lastScrollTop - scrollTop) <= delta) {
+    // No hacer nada si el scroll es menor que delta o si el menú de navegación está abierto
+    if (Math.abs(lastScrollTop - scrollTop) <= delta || menuOpen) {
         return;
     }
 
