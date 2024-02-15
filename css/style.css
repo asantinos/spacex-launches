@@ -369,6 +369,35 @@ header.scroll-down {
     right: 2%;
 }
 
+.auto-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    z-index: 999;
+}
+
+.btn-play,
+.btn-pause {
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-play:hover,
+.btn-pause:hover {
+    transform: scale(1.2);
+}
+
+.btn-play {
+    font-size: 1.15rem;
+    display: none;
+}
+
 @media (max-width: 768px) {
     .carrousel-container {
         min-width: 100%;
@@ -463,6 +492,7 @@ header.scroll-down {
 footer {
     background-color: #000;
     padding-top: 2rem;
+    margin-top: 1rem;
     text-align: center;
     border-top: 1px solid #222;
 }

@@ -32,3 +32,34 @@ prevSlideBtn.addEventListener("click", () => {
 });
 
 updateSlidePosition();
+
+// Autoplay carrousel
+const playBtn = document.querySelector(".btn-play");
+const pauseBtn = document.querySelector(".btn-pause");
+
+// intervalId is a global variable to be able to clear the interval
+let intervalId = null;
+
+const playCarrousel = () => {
+    intervalId = setInterval(() => {
+        nextSlideBtn.click();
+    }, 3000);
+};
+
+const pauseCarrousel = () => {
+    clearInterval(intervalId);
+};
+
+playBtn.addEventListener("click", () => {
+    playCarrousel();
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "block";
+});
+
+pauseBtn.addEventListener("click", () => {
+    pauseCarrousel();
+    pauseBtn.style.display = "none";
+    playBtn.style.display = "block";
+});
+
+playCarrousel();
