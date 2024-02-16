@@ -113,6 +113,7 @@ header.scroll-down {
 
 .nav-menu ul {
     display: flex;
+    align-items: center;
     gap: 2rem;
     font-weight: 600;
 }
@@ -137,6 +138,32 @@ header.scroll-down {
 
 .nav-menu ul li a:hover::before {
     width: 100%;
+}
+
+/* DARK MODE */
+.nav-menu #toggle-mode {
+    cursor: pointer;
+}
+
+.nav-menu #light-icon,
+.nav-menu #dark-icon {
+    height: 1.5rem;
+    fill: #000;
+    transition: fill 0.2s ease-in-out;
+}
+
+.nav-menu #dark-icon:hover,
+.nav-menu #light-icon:hover {
+    fill: #fff;
+}
+
+.nav-menu #light-icon {
+    display: none;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Nav menu responsive */
@@ -172,9 +199,24 @@ header.scroll-down {
         text-align: right;
     }
 
+    .nav-menu ul li:last-child {
+        border-bottom: none;
+    }
+
     .nav-menu ul li a {
         font-size: 1rem;
         text-transform: uppercase;
+    }
+
+    .nav-menu #toggle-mode {
+        position: absolute;
+        bottom: 1rem;
+        right: 3rem;
+    }
+
+    .nav-menu #dark-icon,
+    .nav-menu #light-icon {
+        height: 2rem;
     }
 }
 
@@ -235,6 +277,7 @@ header.scroll-down {
     position: absolute;
     text-align: center;
     padding: 0 2rem;
+    user-select: none;
 }
 
 .hero-body h1 {
@@ -301,12 +344,11 @@ header.scroll-down {
 
 /* CARROUSEL */
 .carrousel-container {
-    width: 100%;
-    min-width: 800px;
+    margin: 0 auto;
+    max-width: 800px;
     height: 600px;
     position: relative;
     overflow: hidden;
-    /* border-radius: 1rem; */
 }
 
 .carrousel-slide {
