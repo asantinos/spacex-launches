@@ -11,12 +11,12 @@ toggleBtn.addEventListener("click", () => {
     document.querySelector("footer").classList.toggle("light-mode");
 
     if (darkMode) {
-        darkIcon.style.display = "flex";
-        lightIcon.style.display = "none";
-        localStorage.setItem("darkMode", "true");
-    } else {
         darkIcon.style.display = "none";
         lightIcon.style.display = "flex";
+        localStorage.setItem("darkMode", "true");
+    } else {
+        darkIcon.style.display = "flex";
+        lightIcon.style.display = "none";
         localStorage.setItem("darkMode", "false");
     }
 });

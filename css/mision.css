@@ -1,5 +1,5 @@
 main {
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 
 .video {
@@ -47,4 +47,13 @@ main {
 
 .contenido-video-texto {
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contenido-video h2 {
+        font-size: 3rem;
+    }
+    .contenido-video p {
+        font-size: 1rem;
+    }
 }
