@@ -4,8 +4,6 @@
  * Github: https://github.com/asantinos/spacex-responsive-with-form.git
  */
 
-// Import carrusel.js and darkMode.js
-import "./carrousel.js";
 import "./darkMode.js";
 
 // BURGER ICON ANIMATION

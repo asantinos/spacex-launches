@@ -16,6 +16,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 2rem;
+    margin-top: -1rem;
 }
 
 .banner h1 {
@@ -60,6 +61,11 @@ main {
 
 .launches-counter .counter:last-child {
     border-right: none;
+}
+
+.light-mode .launches-counter .counter h2,
+.light-mode .launches-counter .counter p{
+    color: #000;
 }
 
 .launches-counter .counter h2 {

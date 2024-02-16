@@ -1,5 +1,5 @@
 main {
-    padding: 6rem 2rem 0 2rem;
+    padding: 8rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +31,7 @@ main {
 
 .form ul li {
     color: #ff5959;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .form legend {
@@ -43,7 +43,7 @@ main {
 
 .form label {
     display: block;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
 }
 
 .form input,
@@ -51,9 +51,15 @@ main {
     width: 100%;
     padding: 1rem;
     border: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
     margin-bottom: 2rem;
+}
+
+.light-mode .form input,
+.light-mode .form textarea {
+    background-color: #f4f4f4;
+    color: #000;
 }
 
 .form textarea {
@@ -70,7 +76,7 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .form input[type="submit"]:hover {

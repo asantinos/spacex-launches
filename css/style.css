@@ -145,7 +145,11 @@ header.scroll-down {
     cursor: pointer;
 }
 
-.nav-menu #light-icon,
+.nav-menu #light-icon {
+    height: 1.5rem;
+    stroke: #fff;
+    transition: fill 0.2s ease-in-out;
+}
 .nav-menu #dark-icon {
     height: 1.5rem;
     fill: #000;
@@ -161,9 +165,9 @@ header.scroll-down {
     display: none;
 }
 
-.dark-mode {
-    background-color: #000;
-    color: #fff;
+.light-mode {
+    background-color: #fff;
+    color: #000;
 }
 
 /* Nav menu responsive */
@@ -281,16 +285,19 @@ header.scroll-down {
 }
 
 .hero-body h1 {
+    color: #fff;
     font-size: var(--h1-font-size);
     font-family: "Archivo Black", sans-serif;
 }
 
 .hero-body span {
+    color: #fff;
     font-size: var(--span-font-size);
     font-family: "Rubik Scribble", cursive;
 }
 
 .hero-body p {
+    color: #fff;
     font-size: var(--p-font-size);
     margin-top: 1rem;
     font-family: "Grape Nuts", cursive;
@@ -491,10 +498,19 @@ header.scroll-down {
     overflow: hidden;
     transition: all 0.3s ease;
 }
+.light-mode .mission-card {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
 
 .mission-card:hover {
     border: 1px solid #fff;
     transform: scale(1.02);
+}
+
+.light-mode .mission-card:hover {
+    border: 1px solid #000;
 }
 
 .mission-image {
@@ -570,6 +586,10 @@ footer {
     color: #fff;
 }
 
+.light-mode .footer-section ul li a:hover {
+    color: #000;
+}
+
 .footer-section p {
     font-size: 1rem;
     color: #9a9a9a;
@@ -591,6 +611,14 @@ footer {
 
 .social-media img {
     width: 1.8rem;
+}
+
+.light-mode .social-media img {
+    filter: invert(1);
+}
+
+.light-mode .social-media img:hover {
+    filter: drop-shadow(0 0 0.5rem #000000);
 }
 
 .social-media img:hover {
