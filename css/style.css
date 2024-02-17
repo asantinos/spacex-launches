@@ -457,6 +457,11 @@ header.scroll-down {
     transition: all 0.3s ease;
 }
 
+.light-mode .btn-play,
+.light-mode .btn-pause {
+    color: #000;
+}
+
 .btn-play:hover,
 .btn-pause:hover {
     transform: scale(1.2);
