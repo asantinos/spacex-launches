@@ -63,3 +63,26 @@ pauseBtn.addEventListener("click", () => {
 });
 
 playCarrousel();
+
+// Modal view for images in the carrousel and close when clicking outside the image
+const modal = document.getElementById("carrousel-modal");
+const carrouselImages = document.querySelectorAll(".carrousel-image");
+const modalImg = document.getElementById("modal-image");
+
+carrouselImages.forEach((image) => {
+    image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+    });
+});
+
+const closeBtn = document.querySelector(".modal-close");
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
