@@ -1,0 +1,56 @@
+.missions
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 1rem
+
+.mission-card
+    width: 100%
+    background-color: #222
+    border-radius: 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    border: 1px solid #222
+    overflow: hidden
+    transition: all 0.3s ease
+
+.light-mode .mission-card
+    color: #000
+    background-color: #fff
+    border: 1px solid #ccc
+
+.mission-card:hover
+    border: 1px solid #fff
+    transform: scale(1.02)
+
+.light-mode .mission-card:hover
+    border: 1px solid #000
+
+.mission-image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.mission-body
+    position: relative
+    padding: 1rem 1rem 3rem 1rem
+    flex: 1
+
+    h3
+        font-size: 1.5rem
+        margin-bottom: 1rem
+
+    p
+        height: 10rem
+        overflow: auto
+        font-size: 1rem
+        line-height: 1.5
+        color: #9a9a9a
+
+    span
+        position: absolute
+        bottom: 1rem
+        right: 1rem
+        font-size: 0.9rem
+        color: #656565

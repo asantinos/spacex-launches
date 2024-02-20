@@ -1,0 +1,166 @@
+@media (max-width: 768px)
+  \:root
+    --h1-font-size: 1.5rem
+    --span-font-size: 2rem
+    --p-font-size: 1rem
+    --main-logo-height: 1rem
+    --satellite-svg-width: 6rem
+
+@media (max-width: 768px)
+  .nav-menu
+    position: fixed
+    bottom: 0
+    left: 0
+    transform: translateX(100%)
+    width: 100%
+    height: 100%
+    background-color: #000
+    z-index: 99
+    transition: transform 0.3s ease
+
+    &.active
+      transform: translateX(0)
+
+    ul
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 5rem
+      padding-top: 1rem
+      gap: 1rem
+      background-color: #000
+
+  .light-mode .nav-menu ul
+    background-color: #fff
+
+  .nav-menu ul li
+    width: 80%
+    padding: 0.5rem 0 1.5rem 0
+    border-bottom: 1px solid #222
+    text-align: right
+
+  .light-mode .nav-menu ul li
+    border-bottom: 1px solid #ccc
+
+  .nav-menu ul li
+    &:last-child
+      border-bottom: none
+
+    a
+      font-size: 1rem
+      text-transform: uppercase
+
+  .light-mode .nav-menu ul li a
+    color: #000
+
+  .nav-menu
+    #toggle-mode
+      background-color: #000
+      position: absolute
+      bottom: 2rem
+      right: 2rem
+      padding: 0.5rem
+      width: fit-content
+      border-radius: 50%
+      border: 1px solid #fff
+
+    #dark-icon, #light-icon
+      height: 2rem
+
+@media (max-width: 768px)
+  .burger-svg
+    display: block
+    cursor: pointer
+    z-index: 999
+    transition: transform 0.3s
+
+    &.open
+      transform: rotate(45deg)
+
+      rect
+        transition: opacity 0.3s, transform 0.3s
+
+        &:nth-child(1)
+          transform-origin: center center
+          transform: translate(0, 50%)
+
+        &:nth-child(2)
+          opacity: 0
+
+        &:nth-child(3)
+          transform-origin: center center
+          transform: translate(25%, 0) rotate(90deg)
+
+@media (max-width: 768px)
+  .carrousel-container, .carrousel-slide
+    min-width: 100%
+    height: 300px
+
+  .carrousel-control
+    width: 20px
+
+    &:first-of-type
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+
+    &:last-of-type
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+
+@media (max-width: 768px)
+  .footer-container
+    grid-template-columns: repeat(1, 1fr)
+
+  .footer-section
+    margin: 0 auto
+    max-width: 100%
+    padding: 0 2rem
+
+    ul
+      margin-bottom: 1rem
+      a
+        font-size: 0.9rem
+
+    p
+      font-size: 0.9rem
+
+  .footer .footer-copy p
+    font-size: 0.9rem
+
+@media (min-width: 992px)
+  .video video
+    width: 100%
+
+@media (max-width: 768px)
+  .contenido-video
+    h2
+      font-size: 3rem
+
+    p
+      font-size: 1rem
+
+  @media (max-width: 768px)
+  .banner
+    h1
+      max-width: 100%
+      font-size: 1rem
+
+    span
+      font-size: 1rem
+
+@media (max-width: 768px)
+  .launches-counter
+    flex-direction: column
+    gap: 1rem
+
+    .counter
+      padding: 1rem 0
+      border-right: none
+
+  .about-container
+    max-width: 100%
+
+    h2
+      font-size: 1.5rem
+
+    p
+      font-size: 1rem
